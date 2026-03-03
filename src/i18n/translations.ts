@@ -4,6 +4,7 @@ export const translations = {
       nav: {
         home: "Home",
         about: "About",
+        contact: "Contact",
         searchPlaceholder: "Search for apartments, rooms...",
         signUp: "Sign Up",
         logOut: "Log Out",
@@ -121,6 +122,7 @@ export const translations = {
       nav: {
         home: "الرئيسية",
         about: "عن الموقع",
+        contact: "تواصل معنا",
         searchPlaceholder: "ابحث عن شقق، غرف...",
         signUp: "تسجيل",
         logOut: "تسجيل خروج",

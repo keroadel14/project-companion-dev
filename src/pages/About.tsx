@@ -29,17 +29,19 @@ const About = () => {
   return (
     <div>
       {/* Mission */}
-      <section className="container py-16 lg:py-20 text-center max-w-3xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight">{t("about.mission")}</h1>
-        <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.missionDesc")}</p>
+      <section className="py-16 lg:py-20 bg-primary/5">
+        <div className="container text-center max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight">{t("about.mission")}</h1>
+          <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.missionDesc")}</p>
+        </div>
       </section>
 
       {/* Team */}
       <section className="container py-12 text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-10">{t("about.team")}</h2>
-        <div className="flex flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-6">
           {team.map((member) => (
-            <div key={member.name} className="flex flex-col items-center">
+            <div key={member.name} className="flex flex-col items-center p-6 rounded-2xl border bg-card hover:shadow-lg hover:-translate-y-1 transition-all duration-300 min-w-[180px]">
               <div className="h-24 w-24 rounded-full bg-secondary border-2 border-primary/20 flex items-center justify-center text-2xl font-bold text-primary mb-3">
                 {member.name.split(" ").map(n => n[0]).join("")}
               </div>
