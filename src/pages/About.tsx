@@ -29,9 +29,11 @@ const About = () => {
   return (
     <div>
       {/* Mission */}
-      <section className="container py-16 lg:py-20 text-center max-w-3xl mx-auto">
-        <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight">{t("about.mission")}</h1>
-        <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.missionDesc")}</p>
+      <section className="py-16 lg:py-20 bg-primary/5">
+        <div className="container text-center max-w-3xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl font-extrabold leading-tight">{t("about.mission")}</h1>
+          <p className="mt-6 text-muted-foreground leading-relaxed">{t("about.missionDesc")}</p>
+        </div>
       </section>
 
       {/* Team */}
