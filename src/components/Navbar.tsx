@@ -103,12 +103,19 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          {/* Sign Up */}
-          <Link to="/sign-in">
-            <Button size="sm" className="rounded-full px-5">
-              {t("nav.signUp")}
+          {/* Sign Up / Log Out */}
+          {isLoggedIn ? (
+            <Button size="sm" variant="outline" className="rounded-full px-5 gap-2" onClick={() => { logout(); navigate("/"); }}>
+              <LogOut className="h-4 w-4" />
+              {t("nav.logOut")}
             </Button>
-          </Link>
+          ) : (
+            <Link to="/sign-in">
+              <Button size="sm" className="rounded-full px-5">
+                {t("nav.signUp")}
+              </Button>
+            </Link>
+          )}
         </div>
 
         {/* Mobile hamburger */}
