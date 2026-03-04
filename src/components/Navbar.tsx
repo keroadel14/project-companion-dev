@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Search, Moon, Sun, User, Globe, Menu, X } from "lucide-react";
+import { Search, Moon, Sun, User, Globe, Menu, X, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/ThemeContext";
+import { useAuth } from "@/contexts/AuthContext";
 import { cn } from "@/lib/utils";
 import {
   DropdownMenu,
@@ -15,7 +16,9 @@ import {
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const { theme, toggleTheme } = useTheme();
+  const { isLoggedIn, logout } = useAuth();
   const location = useLocation();
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const isActive = (path: string) => location.pathname === path;
@@ -100,12 +103,19 @@ const Navbar = () => {
             </Button>
           </Link>
 
-          {/* Sign Up */}
-          <Link to="/sign-in">
-            <Button size="sm" className="rounded-full px-5">
-              {t("nav.signUp")}
+          {/* Sign Up / Log Out */}
+          {isLoggedIn ? (
+            <Button size="sm" variant="outline" className="rounded-full px-5 gap-2" onClick={() => { logout(); navigate("/"); }}>
+              <LogOut className="h-4 w-4" />
+              {t("nav.logOut")}
             </Button>
-          </Link>
+          ) : (
+            <Link to="/sign-in">
+              <Button size="sm" className="rounded-full px-5">
+                {t("nav.signUp")}
+              </Button>
+            </Link>
+          )}
         </div>
 
         {/* Mobile hamburger */}
@@ -151,7 +161,16 @@ const Navbar = () => {
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
           </div>
-          <Button className="w-full rounded-full">{t("nav.signUp")}</Button>
+          {isLoggedIn ? (
+            <Button variant="outline" className="w-full rounded-full gap-2" onClick={() => { logout(); setMobileOpen(false); navigate("/"); }}>
+              <LogOut className="h-4 w-4" />
+              {t("nav.logOut")}
+            </Button>
+          ) : (
+            <Link to="/sign-in" onClick={() => setMobileOpen(false)}>
+              <Button className="w-full rounded-full">{t("nav.signUp")}</Button>
+            </Link>
+          )}
         </div>
       )}
     </nav>
