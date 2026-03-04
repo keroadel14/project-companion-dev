@@ -101,9 +101,11 @@ const Navbar = () => {
           </Link>
 
           {/* Sign Up */}
-          <Button size="sm" className="rounded-full px-5">
-            {t("nav.signUp")}
-          </Button>
+          <Link to="/sign-in">
+            <Button size="sm" className="rounded-full px-5">
+              {t("nav.signUp")}
+            </Button>
+          </Link>
         </div>
 
         {/* Mobile hamburger */}

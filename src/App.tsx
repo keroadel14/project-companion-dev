@@ -8,6 +8,9 @@ import Layout from "@/components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import SignIn from "./pages/SignIn";
+import CreateAccount from "./pages/CreateAccount";
+import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
 import "@/i18n";
 
@@ -20,14 +23,17 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <Layout>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Layout>
+          <Routes>
+            {/* Auth pages without layout */}
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/create-account" element={<CreateAccount />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            {/* Pages with layout */}
+            <Route path="/" element={<Layout><Index /></Layout>} />
+            <Route path="/about" element={<Layout><About /></Layout>} />
+            <Route path="/contact" element={<Layout><Contact /></Layout>} />
+            <Route path="*" element={<Layout><NotFound /></Layout>} />
+          </Routes>
         </BrowserRouter>
       </TooltipProvider>
     </ThemeProvider>
