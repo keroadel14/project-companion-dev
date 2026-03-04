@@ -161,7 +161,16 @@ const Navbar = () => {
               {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
             </Button>
           </div>
-          <Button className="w-full rounded-full">{t("nav.signUp")}</Button>
+          {isLoggedIn ? (
+            <Button variant="outline" className="w-full rounded-full gap-2" onClick={() => { logout(); setMobileOpen(false); navigate("/"); }}>
+              <LogOut className="h-4 w-4" />
+              {t("nav.logOut")}
+            </Button>
+          ) : (
+            <Link to="/sign-in" onClick={() => setMobileOpen(false)}>
+              <Button className="w-full rounded-full">{t("nav.signUp")}</Button>
+            </Link>
+          )}
         </div>
       )}
     </nav>
