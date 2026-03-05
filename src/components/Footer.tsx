@@ -55,7 +55,7 @@ const Footer = () => {
         <div className="container py-4 flex flex-col sm:flex-row items-center justify-between text-xs text-muted-foreground gap-2">
           <span>{t("footer.rights")}</span>
           <div className="flex gap-4">
-            <span>{t("footer.privacy")}</span>
+            <a href="/privacy-policy" className="hover:text-foreground transition-colors">{t("footer.privacy")}</a>
             <span>{t("footer.terms")}</span>
           </div>
         </div>
