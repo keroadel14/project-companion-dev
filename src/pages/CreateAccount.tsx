@@ -17,6 +17,8 @@ import {
 
 const CreateAccount = () => {
   const { t } = useTranslation();
+  const { login } = useAuth();
+  const navigate = useNavigate();
   const [regType, setRegType] = useState<"student" | "landlord">("student");
   const [gender, setGender] = useState("male");
   const [idFile, setIdFile] = useState<File | null>(null);
@@ -25,6 +27,8 @@ const CreateAccount = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    login(regType);
+    navigate("/");
   };
 
   return (
