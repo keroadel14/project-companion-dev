@@ -97,7 +97,7 @@ const Navbar = () => {
           </Button>
 
           {/* Profile */}
-          <Link to="/contact">
+          <Link to={isLoggedIn ? "/profile" : "/sign-in"}>
             <Button variant="ghost" size="icon">
               <User className="h-4 w-4" />
             </Button>

@@ -17,7 +17,7 @@ const SignIn = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    login();
+    login("student");
     navigate("/");
   };
 
