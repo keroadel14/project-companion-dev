@@ -170,7 +170,7 @@ const CreateAccount = () => {
             />
             <Label htmlFor="terms" className="text-sm cursor-pointer">
               {t("auth.agreeTerms")}{" "}
-              <a href="#" className="text-primary hover:underline">{t("auth.privacy")}</a>
+              <a href="/privacy-policy" className="text-primary hover:underline">{t("auth.privacy")}</a>
             </Label>
           </div>
 
