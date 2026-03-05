@@ -82,7 +82,7 @@ const SignIn = () => {
 
           <p className="text-xs text-muted-foreground mt-6">
             {t("auth.agreeTo")}{" "}
-            <a href="#" className="underline">{t("auth.privacy")}</a>{" "}
+            <a href="/privacy-policy" className="underline">{t("auth.privacy")}</a>{" "}
             {t("auth.and")}{" "}
             <a href="#" className="underline">{t("auth.terms")}</a>.
           </p>
