@@ -13,6 +13,7 @@ import SignIn from "./pages/SignIn";
 import CreateAccount from "./pages/CreateAccount";
 import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
+import Profile from "./pages/Profile";
 import "@/i18n";
 
 const queryClient = new QueryClient();
