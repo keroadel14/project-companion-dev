@@ -28,6 +28,7 @@ const testimonials = [
 
 const Index = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
