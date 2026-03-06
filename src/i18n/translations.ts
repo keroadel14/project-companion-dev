@@ -3,6 +3,7 @@ export const translations = {
     translation: {
       nav: {
         home: "Home",
+        listings: "Listings",
         about: "About",
         contact: "Contact",
         searchPlaceholder: "Search for apartments, rooms...",
@@ -181,6 +182,7 @@ export const translations = {
     translation: {
       nav: {
         home: "الرئيسية",
+        listings: "القوائم",
         about: "عن الموقع",
         contact: "تواصل معنا",
         searchPlaceholder: "ابحث عن شقق، غرف...",

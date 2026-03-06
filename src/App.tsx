@@ -15,6 +15,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Listings from "./pages/Listings";
 import "@/i18n";
 
 const queryClient = new QueryClient();
@@ -32,6 +33,7 @@ const App = () => (
               <Route path="/create-account" element={<CreateAccount />} />
               <Route path="/forgot-password" element={<ForgotPassword />} />
               <Route path="/profile" element={<Layout><Profile /></Layout>} />
+              <Route path="/listings" element={<Layout><Listings /></Layout>} />
               <Route path="/" element={<Layout><Index /></Layout>} />
               <Route path="/about" element={<Layout><About /></Layout>} />
               <Route path="/contact" element={<Layout><Contact /></Layout>} />
