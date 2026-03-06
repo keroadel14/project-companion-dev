@@ -119,7 +119,7 @@ const Index = () => {
             { icon: Building, title: t("howItWorks.view"), desc: t("howItWorks.viewDesc") },
             { icon: MessageSquare, title: t("howItWorks.secure"), desc: t("howItWorks.secureDesc") },
           ].map((step, i) => (
-            <div key={i} className="flex flex-col items-center p-6 rounded-2xl border bg-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div key={i} onClick={step.path ? () => navigate(step.path!) : undefined} className={`flex flex-col items-center p-6 rounded-2xl border bg-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${step.path ? 'ring-1 ring-primary/20' : ''}`}>
               <div className="h-14 w-14 rounded-xl bg-secondary group-hover:bg-primary/10 flex items-center justify-center mb-4 transition-colors duration-300">
                 <step.icon className="h-6 w-6 text-primary" />
               </div>
