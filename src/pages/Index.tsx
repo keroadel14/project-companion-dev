@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Building, MessageSquare, ChevronLeft, ChevronRight, Bed, Bath, Users } from "lucide-react";
 import { useRef, useState } from "react";
@@ -27,6 +28,7 @@ const testimonials = [
 
 const Index = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -113,11 +115,11 @@ const Index = () => {
         <h2 className="text-2xl sm:text-3xl font-bold mb-12">{t("howItWorks.title")}</h2>
         <div className="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
           {[
-            { icon: Search, title: t("howItWorks.search"), desc: t("howItWorks.searchDesc") },
-            { icon: Building, title: t("howItWorks.view"), desc: t("howItWorks.viewDesc") },
-            { icon: MessageSquare, title: t("howItWorks.secure"), desc: t("howItWorks.secureDesc") },
+            { icon: Search, title: t("howItWorks.search"), desc: t("howItWorks.searchDesc"), path: "/listings" },
+            { icon: Building, title: t("howItWorks.view"), desc: t("howItWorks.viewDesc"), path: undefined },
+            { icon: MessageSquare, title: t("howItWorks.secure"), desc: t("howItWorks.secureDesc"), path: undefined },
           ].map((step, i) => (
-            <div key={i} className="flex flex-col items-center p-6 rounded-2xl border bg-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group">
+            <div key={i} onClick={step.path ? () => navigate(step.path!) : undefined} className={`flex flex-col items-center p-6 rounded-2xl border bg-card hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group ${step.path ? 'ring-1 ring-primary/20' : ''}`}>
               <div className="h-14 w-14 rounded-xl bg-secondary group-hover:bg-primary/10 flex items-center justify-center mb-4 transition-colors duration-300">
                 <step.icon className="h-6 w-6 text-primary" />
               </div>
