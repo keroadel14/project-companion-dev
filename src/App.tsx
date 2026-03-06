@@ -15,6 +15,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Listings from "./pages/Listings";
 import "@/i18n";
 
 const queryClient = new QueryClient();
