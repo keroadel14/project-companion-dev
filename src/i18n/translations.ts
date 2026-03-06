@@ -182,6 +182,7 @@ export const translations = {
     translation: {
       nav: {
         home: "الرئيسية",
+        listings: "القوائم",
         about: "عن الموقع",
         contact: "تواصل معنا",
         searchPlaceholder: "ابحث عن شقق، غرف...",
