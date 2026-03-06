@@ -3,6 +3,7 @@ export const translations = {
     translation: {
       nav: {
         home: "Home",
+        listings: "Listings",
         about: "About",
         contact: "Contact",
         searchPlaceholder: "Search for apartments, rooms...",
