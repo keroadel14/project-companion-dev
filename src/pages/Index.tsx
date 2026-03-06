@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Building, MessageSquare, ChevronLeft, ChevronRight, Bed, Bath, Users } from "lucide-react";
 import { useRef, useState } from "react";
