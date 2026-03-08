@@ -19,6 +19,7 @@ import Listings from "./pages/Listings";
 import DormReview from "./pages/DormReview";
 import LandlordReview from "./pages/LandlordReview";
 import StudentReview from "./pages/StudentReview";
+import PropertyReviews from "./pages/PropertyReviews";
 import "@/i18n";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => (
               <Route path="/review/dorm" element={<Layout><DormReview /></Layout>} />
               <Route path="/review/landlord" element={<Layout><LandlordReview /></Layout>} />
               <Route path="/review/student" element={<Layout><StudentReview /></Layout>} />
+              <Route path="/property/reviews" element={<Layout><PropertyReviews /></Layout>} />
               <Route path="/" element={<Layout><Index /></Layout>} />
               <Route path="/about" element={<Layout><About /></Layout>} />
               <Route path="/contact" element={<Layout><Contact /></Layout>} />
