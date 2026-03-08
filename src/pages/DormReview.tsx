@@ -43,7 +43,8 @@ const DormReview = () => {
   return (
     <div className="min-h-screen bg-muted/30 flex items-center justify-center p-4">
       <div className="w-full max-w-lg rounded-2xl border bg-card p-6 sm:p-8 space-y-6 shadow-sm">
-        <h1 className="text-2xl font-bold text-center">Dorm Review</h1>
+        <h1 className="text-2xl font-bold text-center">{propertyName}</h1>
+        <p className="text-sm text-muted-foreground text-center">Rate your experience</p>
 
         {/* Rating Card */}
         <div className="rounded-xl bg-primary/5 border border-primary/10 p-6 text-center space-y-3">
