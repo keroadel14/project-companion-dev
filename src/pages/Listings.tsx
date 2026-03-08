@@ -69,6 +69,7 @@ const featuredProperty = {
 const Listings = () => {
   const { t, i18n } = useTranslation();
   const isAr = i18n.language === "ar";
+  const navigate = useNavigate();
 
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
