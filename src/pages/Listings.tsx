@@ -324,6 +324,13 @@ const Listings = () => {
                   <Badge className="absolute bottom-3 right-3 bg-primary text-primary-foreground text-xs font-semibold">
                     {property.price.toLocaleString()} EGP/mo
                   </Badge>
+                  <button
+                    onClick={() => navigate(`/property/reviews?property=${property.id}&name=${encodeURIComponent(property.title)}`)}
+                    className="absolute top-3 right-3 bg-card/90 backdrop-blur-sm rounded-full px-2 py-1 flex items-center gap-1 text-xs font-semibold hover:bg-card transition-colors"
+                  >
+                    <Star className="h-3 w-3 fill-primary text-primary" />
+                    {property.rating}
+                  </button>
                 </div>
 
                 {/* Info */}
