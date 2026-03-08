@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Mail, Phone, MapPin, Star, CheckCircle, Plus, Bed, Bath, MoreHorizontal, Wifi, Car, Sofa, UtensilsCrossed, Monitor, PawPrint, Mountain, Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
