@@ -29,6 +29,7 @@ const statusColors: Record<string, string> = {
 
 const StudentProfile = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   return (
     <div className="container py-8 space-y-8">
