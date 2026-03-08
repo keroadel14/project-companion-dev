@@ -48,6 +48,7 @@ const amenitiesList = [
 
 const LandlordProfile = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [showAddModal, setShowAddModal] = useState(false);
 
   return (
