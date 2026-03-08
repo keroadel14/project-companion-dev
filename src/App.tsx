@@ -16,6 +16,9 @@ import NotFound from "./pages/NotFound";
 import Profile from "./pages/Profile";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Listings from "./pages/Listings";
+import DormReview from "./pages/DormReview";
+import LandlordReview from "./pages/LandlordReview";
+import StudentReview from "./pages/StudentReview";
 import "@/i18n";
 
 const queryClient = new QueryClient();
