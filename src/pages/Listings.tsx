@@ -369,6 +369,15 @@ const Listings = () => {
                     <Button size="sm" className="flex-1 rounded-full text-xs">
                       {isAr ? "احجز الآن" : "Book Now"}
                     </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full text-xs gap-1"
+                      onClick={() => navigate(`/review/dorm?property=${property.id}&name=${encodeURIComponent(property.title)}`)}
+                    >
+                      <Star className="h-3 w-3" />
+                      {isAr ? "قيّم" : "Rate"}
+                    </Button>
                   </div>
                 </div>
               </div>
