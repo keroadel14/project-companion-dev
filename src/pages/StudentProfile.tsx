@@ -46,12 +46,16 @@ const StudentProfile = () => {
             </div>
             <h2 className="text-lg font-bold">Alice Wonderland</h2>
             <p className="text-sm text-muted-foreground">University of Technology</p>
-            <div className="flex justify-center gap-0.5 my-2">
+            <button
+              onClick={() => navigate("/review/student")}
+              className="flex justify-center gap-0.5 my-2 cursor-pointer hover:opacity-80 transition-opacity"
+              title="Write a review"
+            >
               {[1, 2, 3, 4].map((i) => (
                 <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
               ))}
               <Star className="h-4 w-4 text-muted-foreground" />
-            </div>
+            </button>
             <Badge variant="outline" className="border-primary text-primary gap-1">
               <CheckCircle className="h-3 w-3" /> Verified Student
             </Badge>

@@ -68,12 +68,16 @@ const LandlordProfile = () => {
             </div>
             <div>
               <h2 className="text-lg font-bold">John Doe</h2>
-              <div className="flex gap-0.5 my-1">
+              <button
+                onClick={() => navigate("/review/landlord")}
+                className="flex gap-0.5 my-1 cursor-pointer hover:opacity-80 transition-opacity"
+                title="Write a review"
+              >
                 {[1, 2, 3, 4].map((i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
                 ))}
                 <Star className="h-3.5 w-3.5 text-muted-foreground" />
-              </div>
+              </button>
               <Badge variant="outline" className="border-primary text-primary text-xs">
                 Verified Landlord
               </Badge>
