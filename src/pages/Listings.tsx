@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Search, MapPin, Bed, Wifi, Wind, Refrigerator, Bookmark, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -68,6 +69,7 @@ const featuredProperty = {
 const Listings = () => {
   const { t, i18n } = useTranslation();
   const isAr = i18n.language === "ar";
+  const navigate = useNavigate();
 
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
@@ -366,6 +368,15 @@ const Listings = () => {
                     </Button>
                     <Button size="sm" className="flex-1 rounded-full text-xs">
                       {isAr ? "احجز الآن" : "Book Now"}
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="rounded-full text-xs gap-1"
+                      onClick={() => navigate(`/review/dorm?property=${property.id}&name=${encodeURIComponent(property.title)}`)}
+                    >
+                      <Star className="h-3 w-3" />
+                      {isAr ? "قيّم" : "Rate"}
                     </Button>
                   </div>
                 </div>
