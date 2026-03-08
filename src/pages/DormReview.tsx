@@ -14,6 +14,8 @@ const improvementTags = [
 ];
 
 const DormReview = () => {
+  const [searchParams] = useSearchParams();
+  const propertyName = searchParams.get("name") || "Dorm";
   const [rating, setRating] = useState(0);
   const [hoveredRating, setHoveredRating] = useState(0);
   const [comment, setComment] = useState("");
