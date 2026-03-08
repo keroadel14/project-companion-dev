@@ -1,4 +1,5 @@
 import { useState, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Search, MapPin, Bed, Wifi, Wind, Refrigerator, Bookmark, CheckCircle, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
