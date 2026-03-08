@@ -19,6 +19,7 @@ import Listings from "./pages/Listings";
 import DormReview from "./pages/DormReview";
 import LandlordReview from "./pages/LandlordReview";
 import StudentReview from "./pages/StudentReview";
+import PropertyReviews from "./pages/PropertyReviews";
 import "@/i18n";
 
 const queryClient = new QueryClient();
