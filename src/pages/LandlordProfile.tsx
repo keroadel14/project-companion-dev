@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Mail, Phone, MapPin, Star, CheckCircle, Plus, Bed, Bath, MoreHorizontal, Wifi, Car, Sofa, UtensilsCrossed, Monitor, PawPrint, Mountain, Upload, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -47,6 +48,7 @@ const amenitiesList = [
 
 const LandlordProfile = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [showAddModal, setShowAddModal] = useState(false);
 
   return (
@@ -66,12 +68,16 @@ const LandlordProfile = () => {
             </div>
             <div>
               <h2 className="text-lg font-bold">John Doe</h2>
-              <div className="flex gap-0.5 my-1">
+              <button
+                onClick={() => navigate("/review/landlord")}
+                className="flex gap-0.5 my-1 cursor-pointer hover:opacity-80 transition-opacity"
+                title="Write a review"
+              >
                 {[1, 2, 3, 4].map((i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-yellow-400 text-yellow-400" />
                 ))}
                 <Star className="h-3.5 w-3.5 text-muted-foreground" />
-              </div>
+              </button>
               <Badge variant="outline" className="border-primary text-primary text-xs">
                 Verified Landlord
               </Badge>
