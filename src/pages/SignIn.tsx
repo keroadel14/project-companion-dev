@@ -15,10 +15,18 @@ const SignIn = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
+  const ADMIN_EMAILS = ["admin@dormlink.com", "superadmin@dormlink.com"];
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    login("student");
-    navigate("/");
+    const email = username.trim().toLowerCase();
+    if (ADMIN_EMAILS.includes(email)) {
+      login("student", email);
+      navigate("/admin/users");
+    } else {
+      login("student", email);
+      navigate("/");
+    }
   };
 
   return (
