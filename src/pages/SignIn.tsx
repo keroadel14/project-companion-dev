@@ -1,30 +1,30 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { User, Lock, Home } from "lucide-react";
+import { User, Lock, Home, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useAuth } from "@/contexts/AuthContext";
 import authBg from "@/assets/auth-bg.jpg";
 
+const ADMIN_EMAILS = ["admin@dormlink.com", "superadmin@dormlink.com"];
+
 const SignIn = () => {
   const { t } = useTranslation();
   const { login } = useAuth();
   const navigate = useNavigate();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const ADMIN_EMAILS = ["admin@dormlink.com", "superadmin@dormlink.com"];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const email = username.trim().toLowerCase();
-    if (ADMIN_EMAILS.includes(email)) {
-      login("student", email);
+    const trimmedEmail = email.trim().toLowerCase();
+    if (ADMIN_EMAILS.includes(trimmedEmail)) {
+      login("student", trimmedEmail);
       navigate("/admin/users");
     } else {
-      login("student", email);
+      login("student", trimmedEmail);
       navigate("/");
     }
   };
@@ -48,14 +48,19 @@ const SignIn = () => {
             <div className="space-y-2">
               <Label className="font-semibold text-sm">{t("auth.username")}</Label>
               <div className="relative">
-                <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
-                  placeholder="John Doe"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
+                  type="email"
+                  placeholder="example@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="pl-10"
+                  required
                 />
               </div>
+              <p className="text-xs text-muted-foreground">
+                Admin emails: admin@dormlink.com, superadmin@dormlink.com
+              </p>
             </div>
 
             <div className="space-y-2">
