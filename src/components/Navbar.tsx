@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Search, Moon, Sun, User, Globe, Menu, X, LogOut } from "lucide-react";
+import { Search, Moon, Sun, User, Globe, Menu, X, LogOut, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useAuth } from "@/contexts/AuthContext";
@@ -95,6 +95,15 @@ const Navbar = () => {
           <Button variant="ghost" size="icon" onClick={toggleTheme}>
             {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </Button>
+
+          {/* Messages */}
+          {isLoggedIn && (
+            <Link to="/messages">
+              <Button variant="ghost" size="icon">
+                <MessageCircle className="h-4 w-4" />
+              </Button>
+            </Link>
+          )}
 
           {/* Profile */}
           <Link to={isLoggedIn ? "/profile" : "/sign-in"}>

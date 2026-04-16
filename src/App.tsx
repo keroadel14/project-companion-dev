@@ -21,6 +21,7 @@ import DormReview from "./pages/DormReview";
 import LandlordReview from "./pages/LandlordReview";
 import StudentReview from "./pages/StudentReview";
 import PropertyReviews from "./pages/PropertyReviews";
+import Messages from "./pages/Messages";
 import UserManagement from "./pages/admin/UserManagement";
 import PopulationVerification from "./pages/admin/PopulationVerification";
 import MonitorActivity from "./pages/admin/MonitorActivity";
@@ -48,6 +49,7 @@ const App = () => (
               <Route path="/review/landlord" element={<Layout><LandlordReview /></Layout>} />
               <Route path="/review/student" element={<Layout><StudentReview /></Layout>} />
               <Route path="/property/reviews" element={<Layout><PropertyReviews /></Layout>} />
+              <Route path="/messages" element={<Layout><Messages /></Layout>} />
               {/* Admin routes */}
               <Route path="/admin/users" element={<AdminLayout><UserManagement /></AdminLayout>} />
               <Route path="/admin/verification" element={<AdminLayout><PopulationVerification /></AdminLayout>} />
