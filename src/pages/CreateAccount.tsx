@@ -85,6 +85,12 @@ const CreateAccount = () => {
             </div>
           </div>
 
+          {/* Email */}
+          <div className="space-y-2">
+            <Label className="font-semibold text-sm">{t("auth.email") || "Email"}</Label>
+            <Input type="email" placeholder={t("auth.enterEmail") || "Enter your email"} />
+          </div>
+
           {/* Phone */}
           <div className="space-y-2">
             <Label className="font-semibold text-sm">{t("auth.phone")}</Label>
