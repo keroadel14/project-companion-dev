@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Search, Moon, Sun, User, Globe, Menu, X, LogOut, MessageCircle } from "lucide-react";
+import dormlinkLogo from "@/assets/dormlink-logo.jpeg";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useAuth } from "@/contexts/AuthContext";
@@ -42,9 +43,7 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">D</span>
-          </div>
+          <img src={dormlinkLogo} alt="DormLink" className="h-9 w-9 rounded-full object-cover" />
           <span className="font-bold text-lg tracking-tight hidden sm:inline">DORMLINK</span>
         </Link>
 

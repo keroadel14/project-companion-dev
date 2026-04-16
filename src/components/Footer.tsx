@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { MapPin, Phone, Mail } from "lucide-react";
+import dormlinkLogo from "@/assets/dormlink-logo.jpeg";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -12,9 +13,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="h-7 w-7 rounded-full bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xs">D</span>
-              </div>
+              <img src={dormlinkLogo} alt="DormLink" className="h-8 w-8 rounded-full object-cover" />
               <span className="font-bold text-lg">DORMLINK</span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">{t("footer.description")}</p>
