@@ -204,7 +204,7 @@ const Messages = () => {
                   </AvatarFallback>
                 </Avatar>
                 {conv.online && (
-                  <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-green-500 border-2 border-background" />
+                  <span className="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-emerald-500 border-2 border-background" />
                 )}
               </div>
               <div className="flex-1 min-w-0">
@@ -239,7 +239,7 @@ const Messages = () => {
                 <h3 className="font-semibold text-sm">{selectedConversation.name}</h3>
                 <div className="flex items-center gap-2 text-xs">
                   {selectedConversation.online && (
-                    <span className="text-green-500 font-medium">Online</span>
+                    <span className="text-emerald-500 font-medium">Online</span>
                   )}
                   {selectedConversation.property && (
                     <>
