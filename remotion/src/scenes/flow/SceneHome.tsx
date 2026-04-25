@@ -1,7 +1,7 @@
 import { AbsoluteFill, useCurrentFrame, spring, useVideoConfig, Img, staticFile, interpolate } from "remotion";
 import { loadFont as loadJakarta } from "@remotion/google-fonts/PlusJakartaSans";
 import { loadFont as loadDM } from "@remotion/google-fonts/DMSans";
-import { BrowserFrame, Cursor, Typewriter } from "../components/BrowserChrome";
+import { BrowserFrame, Cursor, Typewriter } from "../../components/BrowserChrome";
 
 const jakarta = loadJakarta("normal", { weights: ["700", "800"] }).fontFamily;
 const dm = loadDM("normal", { weights: ["400", "500", "600"] }).fontFamily;
