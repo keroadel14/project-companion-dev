@@ -55,7 +55,7 @@ export const SceneProblem: React.FC = () => {
                   gap: 20,
                 }}
               >
-                <div style={{ fontSize: 36 }}>⚠️</div>
+                <div style={{ fontSize: 44, color: "#FF6B6B", fontWeight: 800 }}>!</div>
                 <p style={{ fontFamily: dm, fontSize: 30, color: "#fff", margin: 0, fontWeight: 500 }}>{p}</p>
               </div>
             );

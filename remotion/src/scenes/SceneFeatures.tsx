@@ -7,12 +7,12 @@ const jakarta = loadJakarta("normal", { weights: ["700", "800"] }).fontFamily;
 const dm = loadDM("normal", { weights: ["400", "500"] }).fontFamily;
 
 const features = [
-  { icon: "🏠", title: "Smart Listings", desc: "Filter by city, price, and verified status" },
-  { icon: "🛡️", title: "ID Verification", desc: "Every landlord and student verified by admins" },
-  { icon: "⭐", title: "3-Way Reviews", desc: "Rate dorms, landlords, and students transparently" },
-  { icon: "💬", title: "Secure Chat", desc: "Messages can never be edited or deleted" },
-  { icon: "🌍", title: "Bilingual", desc: "Full Arabic and English support" },
-  { icon: "🔐", title: "Admin Control", desc: "Block, monitor, and report bad actors" },
+  { icon: "⌂", title: "Smart Listings", desc: "Filter by city, price, and verified status" },
+  { icon: "✓", title: "ID Verification", desc: "Every landlord and student verified by admins" },
+  { icon: "★", title: "3-Way Reviews", desc: "Rate dorms, landlords, and students transparently" },
+  { icon: "✉", title: "Secure Chat", desc: "Messages can never be edited or deleted" },
+  { icon: "⌘", title: "Bilingual", desc: "Full Arabic and English support" },
+  { icon: "◆", title: "Admin Control", desc: "Block, monitor, and report bad actors" },
 ];
 
 export const SceneFeatures: React.FC = () => {
